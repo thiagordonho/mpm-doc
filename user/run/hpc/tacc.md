@@ -47,7 +47,7 @@ git clone https://github.com/cb-geo/mpm-benchmarks.git
 To build the Make file, the procedure is similar to running the mpm on a local machine where the user also creates a build directory. However, the cmake command used is:
 
 ```shell
-mkdir build && cd build && cmake -DBOOST_ROOT=$TACC_BOOST_DIR -DBOOST_INCLUDE_DIRS=$TACC_BOOST_INC -DCMAKE_BUILD_TYPE=Release -DEIGEN3_INCLUDE_DIR=$HOME/eigen -DVTK_DIR=/home1/01197/semeraro/VTK-8.2.0/Install/lib64/cmake/vtk-8.2/ ..
+mkdir build && cd build && cmake -DBOOST_ROOT=$TACC_BOOST_DIR -DBOOST_INCLUDE_DIRS=$TACC_BOOST_INC -DCMAKE_BUILD_TYPE=Release -DEIGEN3_INCLUDE_DIR=$HOME/eigen -DVTK_DIR=/home1/01197/semeraro/VTK-8.2.0/Install/lib64/cmake/vtk-8.2/ -DCMAKE_CXX_COMPILER=mpicxx ..
 
 make -j
 ```
